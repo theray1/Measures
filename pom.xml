@@ -17,8 +17,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.7.0</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>1.9</source>
+                    <target>1.9</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -29,12 +29,12 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
-                <version>3.6</version>
+                <version>3.7</version>
             </plugin>
             <plugin>
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
-                <version>1.3.1</version>
+                <version>1.4.3</version>
                 <configuration>
                     <targetClasses>
                         <param>fr.unantes.info.units.*</param>
@@ -55,7 +55,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.9</version>
+                <version>0.8.0</version>
                 <executions>
                     <execution>
                         <goals>
@@ -85,7 +85,7 @@
             <plugin>
                 <groupId>org.pitest</groupId>
                 <artifactId>pitest-maven</artifactId>
-                <version>1.3.1</version>
+                <version>1.4.3</version>
                 <reportSets>
                     <reportSet>
                         <reports>
@@ -97,7 +97,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.7.9</version>
+                <version>0.8.0</version>
                 <reportSets>
                     <reportSet>
                         <reports>
@@ -109,7 +109,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.0.0</version>
+                <version>3.0.1</version>
                 <configuration>
                     <show>public</show>
                 </configuration>
@@ -122,17 +122,6 @@
         </plugins>
     </reporting>
 
-    <!--
-    <reporting>
-
-
-
-
-
-
-        </plugins>
-    </reporting>
-    -->
 
 <dependencies>
     <dependency>
@@ -150,7 +139,7 @@
     <dependency>
         <groupId>org.pitest</groupId>
         <artifactId>pitest</artifactId>
-        <version>1.3.1</version>
+        <version>1.4.3</version>
     </dependency>
 
     <dependency>
