@@ -1,8 +1,8 @@
 package fr.unantes.info.units;
 
-import org.junit.Test;
-
 import static org.assertj.core.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
 
 /**
  * Created on 15/12/2017.

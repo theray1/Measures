@@ -1,8 +1,8 @@
 package fr.unantes.info.units;
 
-import org.junit.Test;
-
 import static org.assertj.core.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
 
 /**
  * Created on 15/12/2017.
@@ -28,7 +28,7 @@ public class InchTest {
         assertThat(inch1).isEqualTo(inch1);
         assertThat(inch1).isNotEqualTo(null);
         assertThat(inch1).isNotEqualTo(this);
-        assertThat(inch1).isNotEqualTo(new Length(1  ));
+        assertThat(inch1).isNotEqualTo(new Length(1));
 
     }
 }
