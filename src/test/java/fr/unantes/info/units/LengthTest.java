@@ -1,5 +1,7 @@
 package fr.unantes.info.units;
 
+
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -12,7 +14,7 @@ public class LengthTest {
     @Test
     public void equals() {
 
-        Length dt = new Length(12.0);
+        Length dt = new Length(12.0 );
 
         dt.equals(null);
         dt.equals(dt);

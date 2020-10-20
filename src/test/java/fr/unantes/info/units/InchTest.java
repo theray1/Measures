@@ -1,7 +1,6 @@
 package fr.unantes.info.units;
 
-import static org.assertj.core.api.Assertions.*;
-
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -25,10 +24,9 @@ public class InchTest {
 
     @Test
     public void equals() {
-        assertThat(inch1).isEqualTo(inch1);
-        assertThat(inch1).isNotEqualTo(null);
-        assertThat(inch1).isNotEqualTo(this);
-        assertThat(inch1).isNotEqualTo(new Length(1));
-
+        assertEquals(inch1,inch1);
+        assertNotEquals(null, inch1);
+        assertNotEquals(this,inch1);
+        assertNotEquals(new Length(1),inch1);
     }
 }

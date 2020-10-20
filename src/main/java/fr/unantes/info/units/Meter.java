@@ -1,7 +1,5 @@
 package fr.unantes.info.units;
 
-import edu.umd.cs.findbugs.annotations.NonNull;
-
 public class Meter extends Length {
 	
 	public Meter(double i) {
@@ -16,7 +14,7 @@ public class Meter extends Length {
 		return new Inch(12);
 	}
 
-	public Meter add(@NonNull Meter other) {
+	public Meter add(Meter other) {
 		return new Meter(this.length + other.length);
 	}
 

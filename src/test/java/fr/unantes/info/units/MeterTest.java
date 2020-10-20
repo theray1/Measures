@@ -1,7 +1,6 @@
 package fr.unantes.info.units;
 
-import static org.assertj.core.api.Assertions.*;
-
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -23,13 +22,13 @@ public class MeterTest {
 
     @Test
     public void equals() {
-        assertThat(m1).isNotEqualTo(new Length(1.0));
+        assertNotEquals(new Length(1.0),m1);
 
     }
 
     @Test
     public void testAdd() {
         Meter m0 = new Meter(0);
-        assertThat(m0.add(m0)).isEqualTo(new Meter(0));
+        assertEquals(new Meter(0),m0.add(m0));
     }
 }
