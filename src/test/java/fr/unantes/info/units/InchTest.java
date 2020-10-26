@@ -27,6 +27,6 @@ public class InchTest {
         assertEquals(inch1,inch1);
         assertNotEquals(null, inch1);
         assertNotEquals(this,inch1);
-        assertNotEquals(new Length(1),inch1);
+        assertNotEquals(inch1, new Length(1));
     }
 }

@@ -22,7 +22,7 @@ public class MeterTest {
 
     @Test
     public void equals() {
-        assertNotEquals(new Length(1.0),m1);
+        assertNotEquals(m1, new Length(1.0));
 
     }
 
