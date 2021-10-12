@@ -1,23 +1,29 @@
 package fr.unantes.info.units;
 
-public class Length {
+/**
+ * A length quantity, without any unit.
+ */
+public abstract class Length extends Quantity {
 
-	protected final double length;
+	protected Length(double d) {
+		super(d);
+	}
 
-	public Length(double d) {
-		this.length = d;
-	}
-	
-	public boolean equals(Object o) {
-		if (o == null) {
-			return false;
-		}
-		
-		if (! (o instanceof Length)) {
-			return false;
-		}
-		
-		Length other = (Length) o;
-		return other.length == length;
-	}
+	/**
+	 * Convert the length into a new object containing a quantity expressed in feet.
+	 */
+	public abstract Foot toFoot();
+
+	/**
+	 * Convert the length into a new object containing a quantity expressed in
+	 * meters.
+	 */
+	public abstract Meter toMeter();
+
+	/**
+	 * Convert the length into a new object containing a quantity expressed in
+	 * inches.
+	 */
+	public abstract Inch toInch();
+
 }

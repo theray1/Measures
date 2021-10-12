@@ -1,27 +1,30 @@
 package fr.unantes.info.units;
 
-import java.util.Objects;
+/**
+ * A volume quantity measured in litres.
+ */
+public class Litre extends Volume {
 
-public class Litre {
-	double val;
-	
 	public Litre(double d) {
-		val = d;
+		super(d);
 	}
-	
+
+	@Override
 	public Gallon toGallon() {
-		return new Gallon(val/4.546);
+		return new Gallon(val / 4.546);
 	}
-	
+
+	@Override
+	public Litre toLitre() {
+		return this;
+	}
+
+	/**
+	 * Return true if the other object is measured in Litre and with the same value.
+	 */
+	@Override
 	public boolean equals(Object o) {
-		if (Objects.isNull(o)) return false;
-				
-		if (o instanceof Litre) {
-			Litre other = (Litre) o;
-			return val == other.val;
-		}
-		return false;
+		return super.equals(o);
 	}
-	
-	
+
 }
