@@ -5,7 +5,7 @@ Bibliothèque pour la représentation et la conversion d'unités de mesures phys
 Unités de volume prises en compte (classe abstraite `Volume`) :
 
 - gallon (classe `Gallon`),
-- litre (clsse `Litre`).
+- litre (classe `Litre`).
 
 Unités de longueur prises en compte (classe abstraite `Length`) :
 
