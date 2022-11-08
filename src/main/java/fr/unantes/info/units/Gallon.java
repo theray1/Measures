@@ -14,12 +14,12 @@ public class Gallon extends Volume {
 
 	@Override
 	public Litre toLitre() {
-		return new Litre(4.546);
+		return new Litre(4.546*val);
 	}
 
 	@Override
 	public Gallon toGallon() {
-		return null;
+		return new Gallon(val);
 	}
 
 	/**

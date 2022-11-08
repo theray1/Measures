@@ -37,4 +37,43 @@ public class InchTest {
         Length i2 = new Inch(2);
         assertNotEquals(i2, i1);
     }
+
+    @Test
+    public void testToInch() {
+        Inch i1 = new Inch(1);
+        assertEquals(i1.getValue(), i1.toInch().getValue());
+    }
+
+    @Test
+    void testNotEqualsSameValueDifferentUnits() {
+        Inch i1 = new Inch(1);
+        Foot f1 = new Foot(1);
+
+        assertNotEquals(i1, f1);
+    }
+
+    @Test
+    void testNotsEqualsDifferentValuesDifferentUnits() {
+        Inch i1 = new Inch(1);
+        Foot f1 = new Foot(2);
+
+        assertNotEquals(i1, f1);
+        assertNotEquals(f1, i1);
+    }
+
+    @Test
+    public void actualTestConvertInchToMeter() {
+        Inch inch = new Inch(5);
+        Meter meter = new Meter(0.127);
+
+        assertEquals(meter, inch.toMeter());
+    }
+
+    @Test
+    public void testConvertInchToFootWithNonOneValue() {
+        Inch inch = new Inch(3);
+        Foot foot = new Foot(0.25);
+
+        assertEquals(foot, inch.toFoot());
+    }
 }

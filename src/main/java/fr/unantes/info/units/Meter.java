@@ -40,6 +40,6 @@ public class Meter extends Length {
 	 * parameter.
 	 */
 	public Meter add(Meter other) {
-		return new Meter(this.val + this.val);
+		return new Meter(this.val + other.getValue());
 	}
 }

@@ -46,4 +46,18 @@ public class MeterTest {
         Meter m2 = new Meter(2);
         assertNotEquals(m2, m1);
     }
+
+    @Test
+    public void testToMeter() {
+        Meter m1 = new Meter(1);
+        assertEquals(m1.getValue(), m1.toMeter().getValue());
+    }
+
+    @Test
+    public void testAddWithNonZeroValues() {
+        Meter m0 = new Meter(8);
+        Meter m1 = new Meter(7.5);
+        assertEquals((new Meter(15.5)), m0.add(m1));
+    }
+
 }

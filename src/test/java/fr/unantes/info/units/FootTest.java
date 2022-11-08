@@ -40,4 +40,18 @@ public class FootTest {
 		assertNotEquals(f2, f1);
 	}
 
+	@Test
+	public void testToFoot() {
+		Foot f1 = new Foot(1);
+		assertEquals(f1.getValue(), f1.toFoot().getValue());
+	}
+
+	@Test
+	void testNotEqualsSameValueDifferentUnits() {
+		Foot f1 = new Foot(1);
+		Meter m1 = new Meter(1);
+
+		assertNotEquals(f1, m1);
+	}
+
 }

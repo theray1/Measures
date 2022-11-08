@@ -7,8 +7,8 @@ public class GallonTest {
 
 	@Test
 	public void testToLitre() {
-		Gallon g = new Gallon(1);
-		Litre l = new Litre(4.546);
+		Gallon g = new Gallon(2);
+		Litre l = new Litre(4.546*2);
 		assertEquals(g.toLitre(), l);
 	}
 
@@ -31,6 +31,20 @@ public class GallonTest {
 		Gallon g1 = new Gallon(1);
 		g1.equals(null);
 		g1.equals(this);
+	}
+
+	@Test
+	public void testToGallon() {
+		Gallon g1 = new Gallon(1);
+		assertEquals(g1.getValue(), g1.toGallon().getValue());
+	}
+
+	@Test
+	void testNotEqualsSameValueDifferentUnits() {
+		Gallon g1 = new Gallon(1);
+		Litre l1 = new Litre(1);
+
+		assertNotEquals(g1, l1);
 	}
 
 }
